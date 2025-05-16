@@ -1,0 +1,36 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#scrolling-text {
+  /* speed of the animation */
+    animation: teleprompterScroll 60s linear infinite; 
+    white-space: pre-line;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Teleprompter animation */
+@keyframes teleprompterScroll {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
